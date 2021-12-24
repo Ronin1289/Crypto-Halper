@@ -48,20 +48,13 @@ public class MainActivity extends AppCompatActivity {
     // adapter, array list, progress bar
     private RecyclerView currencyRV;
     private EditText searchEdt;
-    private ArrayList<CurrencyModal> currencyModalArrayList;
+    public ArrayList<CurrencyModal> currencyModalArrayList;
     private CurrencyRVAdapter currencyRVAdapter;
     private ProgressBar loadingPB;
     private int PSN;
-    public void Select(int position)
-    {
-        PSN=position;
-    }
     public void Select1(View view)
     {
-        int po = (int) view.getTag();
-        //PSN=po;
         Intent i=new Intent(this, select.class);
-        i.putExtra("position",PSN);
         startActivity(i);
     }
     @Override
@@ -135,25 +128,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    /*public void sendNotification()
-    {
-        {
-            NotificationChannel channel = new NotificationChannel("My notification", "My Notification", NotificationManager.IMPORTANCE_DEFAULT);
-            NotificationManager manager = getSystemService(NotificationManager.class);
-            manager.createNotificationChannel(channel);
-        }
-
-
-        NotificationCompat.Builder builder= new NotificationCompat.Builder(MainActivity.this,"My notification");
-        builder.setContentTitle(("My Title"));
-        builder.setContentText("Crypto Notificaton");
-        builder.setSmallIcon(R.drawable.ic_baseline_arrow_circle_up_24);
-        builder.setAutoCancel(true);
-        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(MainActivity.this);
-
-        managerCompat.notify(1,builder.build());
-
-    }*/
 
 
 

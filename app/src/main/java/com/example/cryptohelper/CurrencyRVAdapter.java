@@ -22,13 +22,6 @@ public class CurrencyRVAdapter extends RecyclerView.Adapter<CurrencyRVAdapter.Cu
     private ArrayList<CurrencyModal> currencyModals;
     private Context context;
 
-    public void onClick1 (View view)
-    {
-        int po = (int) view.getTag();
-        MainActivity mActivity = new MainActivity();
-        mActivity.Select(po);
-    }
-
     public CurrencyRVAdapter(ArrayList<CurrencyModal> currencyModals, Context context) {
         this.currencyModals = currencyModals;
         this.context = context;
